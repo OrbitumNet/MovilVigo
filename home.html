@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Orbitum.net</title>
+    <meta name="description" content="">
+    <meta name="author" content="Javier Jiménez Villar (@soyjavi)">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- iPhone -->
+    <link href="http://cdn.tapquo.com/lungo/icon-57.png" sizes="57x57" rel="apple-touch-icon">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-320x460.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPhone (Retina) -->
+    <link href="http://cdn.tapquo.com/lungo/icon-114.png" sizes="114x114" rel="apple-touch-icon">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-640x920.png" media="(device-width: 320px) and (device-height: 480px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPhone 5 -->
+    <link href="http://cdn.tapquo.com/lungo/startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- iPad -->
+    <link href="http://cdn.tapquo.com/lungo/icon-72.png" sizes="72x72" rel="apple-touch-icon">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-768x1004.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-748x1024.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 1)" rel="apple-touch-startup-image">
+
+    <!-- iPad (Retina) -->
+    <link href="http://cdn.tapquo.com/lungo/icon-144.png" sizes="144x144" rel="apple-touch-icon">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-1536x2008.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: portrait)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+    <link href="http://cdn.tapquo.com/lungo/startup-image-1496x2048.png" media="(device-width: 768px) and (device-height: 1024px)
+             and (orientation: landscape)
+             and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="components/lungo/lungo.icon.brand.css">
+    <link rel="stylesheet" href="components/lungo/lungo.css">
+
+    <link rel="stylesheet" href="components/lungo/theme.lungo.css" id="theme-stylesheet">
+
+    <!-- App Stylesheet -->
+    <link rel="stylesheet" href="stylesheets/app.css">
+</head>
+
+<body class="app">
+    <section id="main" data-transition="">
+        <header>
+            <nav class="left">
+                <a href="#features" data-router="aside" data-icon="menu"></a>
+            </nav>
+            <img src="http://cdn.tapquo.com/lungo/logo.png" class="title centered">
+            <nav class="right">
+                <a href="#" data-action="twitter" class="button theme" data-icon="brand twitter"></a>
+                <!-- <a href="#" class="button theme" data-icon="share" data-label="Share"></a> -->
+            </nav>
+        </header>
+
+        <article id="main-article" class="active list ">
+           <!-- CODIGO USU-->
+          
+        </article>
+
+        <article id="environment" class="list">
+        
+            <ul>
+                <li id="os" class="dark" data-icon="mobile">
+                    <strong>Desktop</strong>
+                    <small>unknown</small>
+                </li>
+                <li id="resolution" data-icon="picture">
+                    <strong>0p x 0p</strong>
+                    <small>Screen Resolution</small>
+                </li>
+                <li id="navigator" data-icon="brand html5">
+                    <strong>webkit</strong>
+                    <small>Mobile: </small>
+                </li>
+            </ul>
+        </article>
+
+        
+           
+
+  <article id="RealizarVenta" class="scroll indented">
+        <div>
+          <form>
+            <fieldset >
+                <input id="txtbuscar" type="search" placeholder="Buscar Producto..."/>
+            </fieldset>
+           
+           </form>
+           
+           <br />
+            <p>
+                <a href="#" class="button anchor margin bottom" onclick="Add();">Agregar</a>
+                <a href="#" class="button anchor margin bottom" onclick="LimpiarInput();">Limpiar</a>
+                <br />
+                <div class="no-more-tables">
+		<table id="datatable" class="table-bordered table-striped table-condensed cf">
+			<thead class="cf">
+				<tr>
+					<th>Producto</th>
+					<th>Um.</th>
+					<th>Cant.</th>
+					<th>Precio</th>
+					<th>Importe</th>
+					<th>#</th>
+                     <th style="display:none;">CodProd</th>
+                     <th style="display:none;">CodAlmacen</th>
+                    <th style="display:none;">Indicador</th>
+                    <th style="display:none;">Precio Minimo</th>
+                    <th style="display:none;">CodUMedida</th>
+			    </tr>
+			</thead>
+			<tbody id="bodytable1">
+			<!--	<tr>
+
+                    <td colspan='6' data-title='Informacion!' style='text-align:center;'>No hay Datos</td>
+                   </tr>-->
+              <!--  <tr>
+					<td data-title="Producto">Papa</td>
+					<td data-title="Und.">kg.</td>
+					<td data-title="Cant." >3</td>
+					<td data-title="Precio S/." class="numeric">6,50</td>
+                    <td data-title="Importe S/.">20</td>
+                     <td data-title="Accion">
+                    <button id="btnquitar" onclick="EliminarFila(this);" class="button small cancel"  ><abbr>Quitar</abbr></button>
+                      <button id="btneditar" onclick="EditarFila(this);" class="button small cancel"  ><abbr>Editar</abbr></button>
+                      
+                     </td>
+                      <td style="Display:none;" >00000043</td>
+                     <td style="Display:none;" >A001</td>
+                        <td style="Display:none;" >C</td>
+                        <td style="Display:none;" >0.000</td>
+                   </tr>-->
+                 <!--       <tr>
+					<td data-title="Producto">BOTELLA AMBAR CUSQUEÑA 620ML RT</td>
+					<td data-title="Und.">UNIDAD</td>
+					<td data-title="Cant." >3</td>
+					<td data-title="Precio S/." class="numeric">1,00</td>
+                    <td data-title="Importe S/.">20</td>
+                     <td data-title="Accion">
+                    <button id="Button1" onclick="EliminarFila(this);" class="button small cancel"  ><abbr>Quitar</abbr></button>
+                      <button id="Button4" onclick="EditarFila(this);" class="button small cancel"  ><abbr>Editar</abbr></button>
+                      
+                     </td>
+                      <td style="Display:none;" >00000010</td>
+                     <td style="Display:none;" >A001</td>
+                       <td style="Display:none;" >U</td>
+                       <td style="Display:none;" >0.500</td>
+                       <td style="Display:none;" >0007</td>
+                   </tr>-->
+                <tr>
+                    <td colspan='11' data-title='Informacion!' style='text-align:center;'>No hay Datos</td>
+                <!--    <td colspan='1' data-title='' style='text-align:center;'>No hay Datos</td>-->
+                </tr>
+		</tbody>
+            <tfoot>
+            <tr>
+            <td colspan="4" style="text-align:right; font-weight:bold;">TOTAL</td>
+            <td colspan="2" style=" text-align:left; font-weight:bold;">0,00</td>
+                    
+					
+				
+            </tr>
+            </tfoot>
+		</table>
+	</div>
+    <br />
+                <a href="#" class="button anchor margin bottom" onclick="GenerarVenta();">Enviar Venta</a>
+            </p>
+        </div>
+    </article>
+
+       
+    </section>
+
+    <!-- Lungo dependencies -->
+    <script src="components/quojs/quo.js"></script>
+    <script src="components/lungo/lungo.js"></script>
+
+    <!-- LungoJS - Sandbox App -->
+    <script>
+        Lungo.init({
+            name: 'Kitchen Sink',
+            version: '2.1',
+            resources: ['app/sections/pull.html',
+                        'app/sections/Listar_Venta.htm',
+                        'app/sections/carousel.html',
+                         'app/sections/ListarProductos.htm',
+                        'app/sections/touchevents.html',
+                        'app/asides/features.html']
+        });
+    </script>
+    <script src="app/app.js"></script>
+    <script src="app/events.notification.js"></script>
+    <script src="app/events.touch.js"></script>
+    <script src="app/events.pull.js"></script>
+    <script src="app/events.carousel.js"></script>
+    <script src="app/events.trigger.js"></script>
+    <script src="app/events.themeroller.js"></script>
+    <link href="Styles/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/style.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/table.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
+   <!-- AUTCOMPLETE-->
+   <link href="Scripts/jquery-ui.css" rel="stylesheet" />
+  <script src="Scripts/jquery-1.10.2.js"></script>
+    <script src="Scripts/jquery-ui.js"></script>
+  <style>
+  .ui-autocomplete-loading {
+    background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+  }
+  #city { width: 25em; }
+  </style>
+        <script type="text/javascript">
+       
+            $(function () {
+                function log(message) {
+                    $("<div>").text(message).prependTo("#log");
+                    $("#log").scrollTop(0);
+                }
+
+                $("#txtbuscar").autocomplete({
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "server/login.aspx",
+                            dataType: "jsonp",
+                            data: {
+                                q: request.term,
+                                q2: localStorage.getItem('Almacen'),
+                                q3: localStorage.getItem('Catalogo')
+                            },
+                            success: function (data) {
+                                response(data);
+                            }
+                        });
+                    },
+                    minLength: 4,
+                    select: function (event, ui) {
+
+                    },
+                    open: function () {
+                        $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+                    },
+                    close: function () {
+                        $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+                    }
+                });
+            });
+      
+  </script>
+
+        <script type="text/javascript">
+
+            $(function () {
+                function log(message) {
+                    $("<div>").text(message).prependTo("#log");
+                    $("#log").scrollTop(0);
+                }
+
+                $("#txtbuscar2").autocomplete({
+                    source: function (request, response) {
+                        $.ajax({
+                            url: "server/login.aspx",
+                            dataType: "jsonp",
+                            data: {
+                                q: request.term,
+                                q2: localStorage.getItem('Almacen'),
+                                q3: localStorage.getItem('Catalogo')
+                            },
+                            success: function (data) {
+                                response(data);
+                            }
+                        });
+                    },
+                    minLength: 4,
+                    select: function (event, ui) {
+
+                    },
+                    open: function () {
+                        $(this).removeClass("ui-corner-all").addClass("ui-corner-top");
+                    },
+                    close: function () {
+                        $(this).removeClass("ui-corner-top").addClass("ui-corner-all");
+                    }
+                });
+            });
+
+  </script>
+    <script>
+
+   
+ 
+
+    document.getElementById("main-article").innerHTML = "<ul><li class='dark'>" +
+             "   <strong>" +
+           "     Bienvenido a El Nomade Movil 1.0!" +
+          "  </strong>" +
+          "  </li>" +
+          "    <li data-icon='user'>" +
+          "<span class='icon user'></span>" +
+         "   <strong>Usuario</strong>" +
+         "   <small>" + localStorage.getItem('Nombres') + "</small>" +
+       " </li>" +
+       "   <li data-icon='user'>" +
+       "<span class='icon user'></span>" +
+       "     <strong>Caja</strong>" +
+       "     <small>" + localStorage.getItem('Caja') + "</small>" +
+       " </li>" +
+       "    <li data-icon='user'>" +
+       "<span class='icon user'></span>" +
+        "    <strong>Sucursal</strong>" +
+        "    <small>" + localStorage.getItem('Sucursal') + "</small>" +
+        " </li></ul>";
+    
+    </script>
+    <script src="app/home.js"></script>
+</body>
+</html>

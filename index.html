@@ -1,0 +1,61 @@
+﻿<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    
+    <!-- Stylesheets -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet'>
+    <link href="Styles/stylelogin.css" rel="stylesheet" type="text/css" />
+ 
+    <!-- Optimize for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> 
+    
+</head>
+<body style="background:#FDFEFF;">
+    <!-- HEADER -->
+    <div id="header">
+        
+        <div class="page-full-width cf">
+    
+            <div id="login-intro" class="fl">
+            
+                <h1>Orbitum.net</h1>
+                <h5>VIGO S.R.L</h5>
+            
+            </div> <!-- login-intro -->
+            
+            
+        </div> <!-- end full-width -->    
+ 
+    </div> <!-- end header -->
+    
+    <!-- MAIN CONTENT -->
+    <div id="content">
+    
+        <form  id="login-form">
+        
+            <fieldset>
+ 
+                <p>
+                    <label for="login-username">Usuario</label>
+                    <input type="text" id="txtUser" class="round full-width-input" autofocus />
+                </p>
+ 
+                <p>
+                    <label for="login-password">Clave</label>
+                    <input type="password" id="txtPass" class="round full-width-input" />
+                </p>
+                
+             
+                
+                <a href="#" class="button round blue image-right ic-right-arrow" onclick="login();">LOG IN</a>
+ 
+            </fieldset>
+ 
+        </form>
+        
+    </div> <!-- end content -->
+    <script src="app/login.js"></script>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+</body>
+</html>

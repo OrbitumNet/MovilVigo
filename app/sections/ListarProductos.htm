@@ -1,0 +1,92 @@
+﻿
+<section id="ListarProductos" data-transition="slide">
+    <header data-title="Actualizar Venta">
+        <nav>
+            <a href="#back" data-router="section" data-icon="left" onclick="eliminacodVenta();"></a>
+        </nav>
+        <nav class="right">
+            <a href="#form-extras" data-router="article" class="button" data-label="Extras"></a>
+        </nav>
+    </header>
+
+  <article class="active scroll indented">
+      <div>
+          <form>
+            <fieldset data-icon="search">
+                <input id="txtbuscar2" type="search" placeholder="Buscar Producto..."/>
+            </fieldset>
+           </form>
+           <br />
+            <p>
+                <a href="#" class="button anchor margin bottom" onclick="AddProdDetVent();">Agregar</a>
+                <a href="#" class="button anchor margin bottom" onclick="LimpiarInput2();">Limpiar</a>
+                <br />
+                <div class="no-more-tables">
+		<table id="datatable2" class="table-bordered table-striped table-condensed cf">
+			<thead class="cf">
+				<tr>
+					<th>Producto</th>
+					<th>Um.</th>
+					<th>Cant.</th>
+					<th>Precio</th>
+					<th>Importe</th>
+					<th>#</th>
+                    <th style="Display:none;">Indicador</th>
+                     <th style="Display:none;">Precio Minimo</th>
+                      <th style="Display:none;">CodProd</th>
+                        <th style="Display:none;">IndEdit</th>
+			    </tr>
+			</thead>
+			<tbody id="table_body">
+				<!--<tr>
+					<td data-title="Producto">Papa</td>
+					<td data-title="Und.">kg.</td>
+					<td data-title="Cant." >3</td>
+					<td data-title="Precio S/." class="numeric">6,50</td>
+                    <td data-title="Importe S/.">20</td>
+                     <td data-title="Accion">
+                     <a href="#" class="button small cancel">Editar</a>
+                      <a href="#" class="button small cancel">Quitar</a>
+                      
+                     </td>
+                      <td style="Display:none;" >U</td>
+                        <td style="Display:none;" >3,000</td>
+                        <td style="Display:none;" >000001</td>
+                         <td style="Display:none;" >0</td>
+                   </tr>
+
+                   <tr>
+					<td data-title="Producto">Papa</td>
+					<td data-title="Und.">kg.</td>
+					<td data-title="Cant." >5</td>
+					<td data-title="Precio S/." class="numeric">2,38</td>
+                    <td data-title="Importe S/.">10</td>
+                     <td data-title="Accion">
+                    <a href="#" class="button small cancel">Editar</a>
+                      <a href="#" class="button small cancel">Quitar</a>
+                     
+                      
+                     </td>
+                      <td style="Display:none;" >C</td>
+                          <td style="Display:none;" >0.000</td>
+                        <td style="Display:none;" >000002</td>
+                         <td style="Display:none;" >0</td>
+                   </tr>-->
+		</tbody>
+            <tfoot>
+            <tr>
+            <td colspan="4" style="text-align:right; font-weight:bold;">TOTAL</td>
+            <td colspan="2" style=" text-align:left; font-weight:bold;">0,00</td>
+                    
+					
+				
+            </tr>
+            </tfoot>
+		</table>
+	</div>
+    <br />
+              <!--  <a href="#" class="button anchor margin bottom">Actualizar Venta</a>-->
+            </p>
+        </div>
+    </article>
+</section>

@@ -1,0 +1,170 @@
+/*   
+Responsive table build with Twitter Bootstrap
+Author: Arup Senapati
+Website: http://www.a2zwebhelp.com
+*/
+
+
+body { 
+  color: #000; 
+  font-family: verdana, Arial, 'Trebuchet MS';
+  padding: 0px !important;
+  margin: 0px !important;
+  font-size:13px; 
+  direction: ltr;
+}
+
+
+.greenBox .title{
+  background-color: #35aa47;
+  color: #FFFFFF;
+  margin: 20px 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+} 
+
+.greenBox {  
+   width:96%;
+   margin: 0 auto;
+}
+
+
+/* Responsive Table Layout For Table-1 */
+
+.myTable table { width: 100%; }
+
+@media only screen and (max-width: 800px) {
+  
+  .myTable table {border-left: 1px solid #ddd}
+  .myTable .flip-content:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+  .myTable * html .flip-content { zoom: 1; }
+  .myTable *:first-child+html .flip-content { zoom: 1; }
+  
+  .myTable table { width: 100%; border-collapse: collapse; border-spacing: 0; }
+ 
+  .myTable th,
+  .myTable td { margin: 0; vertical-align: top; }
+  .myTable th { text-align: left; }
+  
+  .myTable table { display: block; position: relative; width: 100%; }
+  .myTable thead { display: block; float: left; }
+  .myTable tbody { display: block; width: auto; position: relative; overflow-x: auto; white-space: nowrap; }
+  .myTable thead tr { display: block; }
+  .myTable th { display: block; text-align: right; }
+  .myTable tbody tr { display: inline-block; vertical-align: top; }
+  .myTable td { display: block; min-height: 1.25em; text-align: left; }
+ 
+ 
+  /* sort out borders */
+ 
+  .myTable th { border-bottom: 0; border-left: 0; }
+  .myTable td { border-left: 0; border-right: 0; border-bottom: 0; }
+  .myTable tbody tr { border-left: 1px solid #ddd; }
+  .myTable th:last-child,
+  .myTable td:last-child { border-bottom: 1px solid #ddd; }
+}
+
+.no-more-tables table {
+  width: 100%;
+}
+
+
+/* Design Layout For Table -2 */
+
+.greenBox .title{
+  background-color: #35aa47;
+  color: #FFFFFF;
+  margin: 20px 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+} 
+
+.greenBox {  
+   width:96%;
+   margin: 0 auto;
+}
+
+.blueBox .title {
+  background-color: #4b8df8;
+  color: #FFFFFF;
+  margin: 20px 0;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;  
+} 
+
+.blueBox {  
+   width:96%;
+   margin: 0 auto;
+}
+
+
+/* Responsive Table Layout For Table-2 */
+
+@media only screen and (max-width: 800px) {
+  
+  /* Force table to not be like tables anymore */
+  .no-more-tables table, 
+  .no-more-tables thead, 
+  .no-more-tables tbody, 
+  .no-more-tables th, 
+  .no-more-tables td, 
+  .no-more-tables tr { 
+    display: block; 
+  }
+ 
+  /* Hide table headers (but not display: none;, for accessibility) */
+  .no-more-tables thead tr { 
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+ 
+  .no-more-tables tr { 
+    border-left: 1px solid #ddd; 
+    border-bottom: 1px solid #ddd; 
+  }
+
+  .no-more-tables tr:last-child {
+    border-bottom: 0;
+  }
+ 
+  .no-more-tables td { 
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee; 
+    position: relative;
+    padding-left: 50%; 
+    white-space: normal;
+    text-align:left;
+  }
+ 
+  .no-more-tables td:before { 
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%; 
+    padding-right: 10px; 
+    white-space: nowrap;
+    text-align:left;
+    font-weight: bold;
+  }
+ 
+  /*
+  Label the data
+  */
+  .no-more-tables td:before { content: attr(data-title); }
+}
+
+
+
+
+
+
+
+
+/* END OF CSS */

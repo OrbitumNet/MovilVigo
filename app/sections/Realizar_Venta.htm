@@ -1,0 +1,98 @@
+﻿
+
+<section id="RealizarVenta" data-transition="slide">
+ 
+    <header data-title="Realizar Venta">
+        <nav>
+            <a href="#back" data-router="section" data-icon="home"></a>
+        </nav>
+        <nav class="right">
+            <a href="#form-extras" data-router="article" class="button" data-label="Extras"></a>
+        </nav>
+    </header>
+
+  <article class="active scroll indented">
+        <div>
+          <form>
+            <fieldset >
+                <input id="city" type="search" placeholder="Buscar Producto..."/>
+            </fieldset>
+           
+           </form>
+             <input id="Text1">
+           <br />
+            <p>
+                <a href="#" class="button anchor margin bottom" onclick="hola(12);">Agregar</a>
+                <a href="#" class="button anchor margin bottom">Limpiar</a>
+                <br />
+                <div class="no-more-tables">
+		<table id="datatable" class="table-bordered table-striped table-condensed cf">
+			<thead class="cf">
+				<tr>
+					<th>Producto</th>
+					<th>Um.</th>
+					<th>Cant.</th>
+					<th>Precio</th>
+					<th>Importe</th>
+					<th>#</th>
+                    <th style="Display:none;">Indicador</th>
+                     <th style="Display:none;">Precio Minimo</th>
+                      <th style="Display:none;">CodProd</th>
+                        <th style="Display:none;">IndEdit</th>
+			    </tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-title="Producto">Papa</td>
+					<td data-title="Und.">kg.</td>
+					<td data-title="Cant." >3</td>
+					<td data-title="Precio S/." class="numeric">6,50</td>
+                    <td data-title="Importe S/.">20</td>
+                     <td data-title="Accion">
+                     <a href="#" class="button small cancel">Editar</a>
+                      <a href="#" class="button small cancel">Quitar</a>
+                      
+                     </td>
+                      <td style="Display:none;" >U</td>
+                        <td style="Display:none;" >3,000</td>
+                        <td style="Display:none;" >000001</td>
+                         <td style="Display:none;" >0</td>
+                   </tr>
+
+                   <tr>
+					<td data-title="Producto">Papa</td>
+					<td data-title="Und.">kg.</td>
+					<td data-title="Cant." >5</td>
+					<td data-title="Precio S/." class="numeric">2,38</td>
+                    <td data-title="Importe S/.">10</td>
+                     <td data-title="Accion">
+                    <a href="#" class="button small cancel">Editar</a>
+                      <a href="#" class="button small cancel">Quitar</a>
+                     
+                      
+                     </td>
+                      <td style="Display:none;" >C</td>
+                          <td style="Display:none;" >0.000</td>
+                        <td style="Display:none;" >000002</td>
+                         <td style="Display:none;" >0</td>
+                   </tr>
+		</tbody>
+            <tfoot>
+            <tr>
+            <td colspan="4" style="text-align:right; font-weight:bold;">TOTAL</td>
+            <td colspan="2" style=" text-align:left; font-weight:bold;">0,00</td>
+                    
+					
+				
+            </tr>
+            </tfoot>
+		</table>
+	</div>
+    <br />
+                <a href="#" class="button anchor margin bottom">Enviar Venta</a>
+            </p>
+        </div>
+    </article>
+</section>
+
+
