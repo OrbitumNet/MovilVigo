@@ -9,8 +9,8 @@ function login() {
             type: "POST",
             url: "http://190.40.94.184:2099/server/login.aspx/Login",
             data: "{user: '" + $("#txtUser").val() + "',clave:'" + $("#txtPass").val() + "',tipo:1}",
-            //contentType: "application/json; charset=utf-8",
-            //dataType: "json",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
             success: OnSuccess,
             failure: function (response) {
                 alert(response.d);
@@ -41,7 +41,7 @@ function OnSuccess(data) {
             localStorage.Nombres = data.d[0].Nombres;
             localStorage.Rol = data.d[0].Rol;
             localStorage.Sucursal = data.d[0].Sucursal;
-            location.href = "http://../home.html"
+            location.href = "http://190.40.94.184:2099/home.html"
 
     }
     //if (data.d ) {

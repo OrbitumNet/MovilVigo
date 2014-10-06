@@ -17,7 +17,7 @@
                 if (VerificarExisteProducto(prod) == false) {//verifica si prod existe
                     $.ajax({
                         type: "POST",
-                        url: "server/login.aspx/AgregarProducto",
+                        url: "http://190.40.94.184:2099/server/login.aspx/AgregarProducto",
                         data: "{descproducto: '" + prod + "',codcatalogo:'" + localStorage.getItem('Catalogo') + "',codalmacen:'" + localStorage.getItem('Almacen') + "'}",
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
@@ -80,7 +80,7 @@
                 if (VerificarExisteProducto(prod) == false) {//verifica si prod existe
                     $.ajax({
                         type: "POST",
-                        url: "server/login.aspx/AgregarProducto",
+                        url: "http://190.40.94.184:2099/server/login.aspx/AgregarProducto",
                         data: "{descproducto: '" + prod + "',codcatalogo:'" + localStorage.getItem('Catalogo') + "',codalmacen:'" + localStorage.getItem('Almacen') + "'}",
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",
@@ -300,7 +300,7 @@
         table.rows[indicefila].cells[11].innerHTML = "0";
         $.ajax({
             type: "POST",
-            url: "server/login.aspx/EditarCant",
+            url: "http://190.40.94.184:2099/server/login.aspx/EditarCant",
             data: "{cantidad: '" + $("#txtcant").val() + "',codAlmc: '" + codAlmacen + "',codProd: '" + codProd + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -531,7 +531,7 @@
         
         $.ajax({
             type: "POST",
-            url: "server/login.aspx/AddVenta",
+            url: "http://190.40.94.184:2099/server/login.aspx/AddVenta",
             data: jsonTablaProd,
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -599,7 +599,7 @@
             if (comprobarEdicion() == false) { //verifica si hay una fila editandose
                 $.ajax({
                     type: "POST",
-                    url: "server/login.aspx/InsertarVenta",
+                    url: "http://190.40.94.184:2099/server/login.aspx/InsertarVenta",
                     data: "{codCatalogo: '" + localStorage.getItem('Catalogo') + "',codSucursal:'" + localStorage.getItem('Sucursal') + "',codCaja:'" + localStorage.getItem('Caja') + "',codUsu:'" + localStorage.getItem('CodUsu') + "',idUsu:'" + localStorage.getItem('idUsu') + "'}",
                     contentType: "application/json; charset=utf-8",
                     dataType: "json",
@@ -630,7 +630,7 @@
         var a = " <li class='dark'><strong> Bienvenido a El Nomade Movil 1.0!</strong></li>";
         $.ajax({
             type: "POST",
-            url: "server/login.aspx/getVentas",
+            url: "http://190.40.94.184:2099/server/login.aspx/getVentas",
             data: "{idUsu:'" + localStorage.getItem('CodUsu') + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -724,7 +724,7 @@
         if (confirm("Deseas eliminar el producto realmente?") == true) {
             $.ajax({
                 type: "POST",
-                url: "server/login.aspx/EliminarDetProd",
+                url: "http://190.40.94.184:2099/server/login.aspx/EliminarDetProd",
                 data: "{codventa:'" + localStorage.getItem('codVenta') + "',vtacnum:'1',item:'" + item + "',tipoprod:'" + tipoprod + "',idUsu:'" + localStorage.getItem('idUsu') + "'}",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -779,7 +779,7 @@
     }
 
     function logout() {
-        location.href = "http://localhost:6798/index.html"
+        location.href = "http://190.40.94.184:2099/index.html"
         localStorage.clear();
     }
 
@@ -861,7 +861,7 @@
                     if (VerificarExisteProducto2(prod) == false) {
                         $.ajax({
                             type: "POST",
-                            url: "server/login.aspx/AgregarProductoDetalle",
+                            url: "http://190.40.94.184:2099/server/login.aspx/AgregarProductoDetalle",
                             data: "{descproducto: '" + prod + "',vtacode:'" + localStorage.getItem('codVenta') + "',codCatalogo:'" + localStorage.getItem('Catalogo') + "',codSucursal:'" + localStorage.getItem('Sucursal') + "',codCaja:'" + localStorage.getItem('Caja') + "',idUsu:'" + localStorage.getItem('idUsu') + "',codalmacen:'" + localStorage.getItem('Almacen') + "'}",
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
@@ -923,7 +923,7 @@
                     if (VerificarExisteProducto2(prod) == false) {
                         $.ajax({
                             type: "POST",
-                            url: "server/login.aspx/AgregarProductoDetalle",
+                            url: "http://190.40.94.184:2099/server/login.aspx/AgregarProductoDetalle",
                             data: "{descproducto: '" + prod + "',vtacode:'" + localStorage.getItem('codVenta') + "',codCatalogo:'" + localStorage.getItem('Catalogo') + "',codSucursal:'" + localStorage.getItem('Sucursal') + "',codCaja:'" + localStorage.getItem('Caja') + "',idUsu:'" + localStorage.getItem('idUsu') + "',codalmacen:'" + localStorage.getItem('Almacen') + "'}",
                             contentType: "application/json; charset=utf-8",
                             dataType: "json",
@@ -1048,7 +1048,7 @@
         var descprod = table.rows[indicefila].cells[0].innerHTML;
         $.ajax({
             type: "POST",
-            url: "server/login.aspx/ActualizarDetProd",
+            url: "http://190.40.94.184:2099/server/login.aspx/ActualizarDetProd",
             data: "{codvta: '" + localStorage.getItem('codVenta') + "',vtacnum:'1', codprod:'" + codpro + "',item:'" + item + "',codunidad:'" + coduni + "',cantidad:'" + $("#txtcant2").val() + "',precio:'" + precio + "',importe:'" +  parseFloat( precio * $("#txtcant2").val() )+ "',codcatalogo:'" + localStorage.getItem('Catalogo') + "',codsucursal:'" + localStorage.getItem('Sucursal') + "',codcaja:'" + localStorage.getItem('Caja') + "',idUsu:'" + localStorage.getItem('idUsu') + "',descprod:'" + descprod + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -1166,7 +1166,7 @@
 
             $.ajax({
                 type: "POST",
-                url: "server/login.aspx/ActualizarDetProd",
+                url: "http://190.40.94.184:2099/server/login.aspx/ActualizarDetProd",
                 data: "{codvta: '" + localStorage.getItem('codVenta') + "',vtacnum:'1', codprod:'" + codpro + "',item:'" + item + "',codunidad:'" + coduni + "',cantidad:'" + cantidad + "',precio:'" + $("#txtprec2").val() + "',importe:'" + parseFloat(  $("#txtprec2").val() * cantidad) + "',codcatalogo:'" + localStorage.getItem('Catalogo') + "',codsucursal:'" + localStorage.getItem('Sucursal') + "',codcaja:'" + localStorage.getItem('Caja') + "',idUsu:'" + localStorage.getItem('idUsu') + "',descprod:'" + descprod + "'}",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
@@ -1210,7 +1210,7 @@
        // alert(item+codpro+coduni)
         $.ajax({
             type: "POST",
-            url: "server/login.aspx/ActualizarDetProdPreC",
+            url: "http://190.40.94.184:2099/server/login.aspx/ActualizarDetProdPreC",
             data: "{codvta: '" + localStorage.getItem('codVenta') + "',vtacnum:'1', codprod:'" + codpro + "',item:'" + item + "',codunidad:'" + coduni + "',cantidad:'" + $("#txtcant2").val() + "',precio:'" + precio + "',codcatalogo:'" + localStorage.getItem('Catalogo') + "',codsucursal:'" + localStorage.getItem('Sucursal') + "',codcaja:'" + localStorage.getItem('Caja') + "',idUsu:'" + localStorage.getItem('idUsu') + "',descprod:'" + descprod + "',codAlmc:'" + localStorage.getItem('Almacen') + "'}",
             contentType: "application/json; charset=utf-8",
             dataType: "json",

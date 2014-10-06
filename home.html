@@ -238,7 +238,7 @@
                 $("#txtbuscar").autocomplete({
                     source: function (request, response) {
                         $.ajax({
-                            url: "server/login.aspx",
+                            url: "http://190.40.94.184:2099/server/login.aspx",
                             dataType: "jsonp",
                             data: {
                                 q: request.term,
